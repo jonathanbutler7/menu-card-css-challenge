@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      main {
+        background: #2ebc74;
+        display: flex;
+        justify-content: center;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header h3,
+      header h2 {
+        margin-bottom: 0;
+      }
+      .card {
+        margin: 1rem;
+        /* width: 400px; */
+        border-radius: 0.5rem;
+        background: #fff;
+      }
+      footer {
+        background: #ccf3df;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+      button {
+        background: #cd3280;
+        color: white;
+        border-radius: 1.5rem;
+        border: none;
+        height: 50px;
+        width: 300px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      a {
+        text-decoration: underline;
+      }
+      ul {
+        margin: 1rem;
+      }
+      ul.leaders,
+      ul.total-leaders {
+        max-width: 40em;
+        padding: 0;
+        overflow-x: hidden;
+        list-style: none;
+      }
+      ul.leaders li::before,
+      ul.total-leaders li:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content: '. . . . . . . . . . . . . . . . . . . . '
+          '. . . . . . . . . . . . . . . . . . . . '
+          '. . . . . . . . . . . . . . . . . . . . '
+          '. . . . . . . . . . . . . . . . . . . . ';
+      }
+      ul.leaders span:first-child {
+        padding-right: 0.33em;
+        background: white;
+      }
+      ul.leaders span + span {
+        float: right;
+        padding-left: 0.33em;
+        background: white;
+      }
+      .total {
+        width: 100%;
+      }
+      ul.total-leaders span:first-child {
+        padding-right: 0.33em;
+        background: #ccf3df;
+      }
+      ul.total-leaders span + span {
+        float: right;
+        padding-left: 0.33em;
+        background: #ccf3df;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <header>
+          <h2>Ray's Italian food</h2>
+          <h3>2/21/2021</h3>
+        </header>
+        <hr />
+        <ul class="leaders">
+          <li>
+            <span>Salmon Ravioli with extra cheese and pasta</span>
+            <span>7.95</span>
+          </li>
+
+          <li><span>Fried Calamari</span> <span>8.95</span></li>
+
+          <li><span>Almond Prawn Cocktail</span> <span>7.95</span></li>
+
+          <li><span>Bruschetta</span> <span>5.25</span></li>
+
+          <li>
+            <span>Margherita Pizza</span>
+            <span>10.95</span>
+          </li>
+        </ul>
+        <footer>
+          <div class="total">
+            <ul class="total-leaders">
+              <li>
+                <span><strong>Total</strong></span>
+                <span><strong>$41.05</strong></span>
+              </li>
+            </ul>
+          </div>
+          <button>Pay total</button>
+          <p>Payments by <a href="">Gorilla, Inc.</a></p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
